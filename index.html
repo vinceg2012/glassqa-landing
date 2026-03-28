@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GlassQA records your actions and generates clean, production-ready test scripts. Playwright-ready UI testing, instantly.">
+    <meta name="theme-color" content="#0b0b0f">
+    <title>GlassQA — Test your UI. Instantly.</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔬</text></svg>">
+</head>
+<body>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <div class="hero-glow"></div>
+        <div class="container">
+            <div class="hero-content fade-in">
+                <h1 class="hero-title">Test your UI.<br><span class="accent">Instantly.</span></h1>
+                <p class="hero-subtitle">GlassQA records your actions and generates clean, production-ready test scripts.</p>
+                <div class="hero-actions">
+                    <a href="#demo" class="btn btn-primary">Try Demo</a>
+                    <a href="#install" class="btn btn-secondary">Install Extension</a>
+                </div>
+            </div>
+            <div class="hero-visual fade-in" style="--delay: 0.2s">
+                <div class="glass-card floating">
+                    <div class="card-header">
+                        <div class="dot red"></div>
+                        <div class="dot yellow"></div>
+                        <div class="dot green"></div>
+                        <span class="card-title">test-checkout.spec.ts</span>
+                    </div>
+                    <div class="card-body">
+                        <code class="code-block">
+                            <span class="code-keyword">test</span>(<span class="code-string">'user completes checkout'</span>, <span class="code-keyword">async</span> ({ page }) => {<br>
+                            &nbsp;&nbsp;<span class="code-keyword">await</span> page.<span class="code-method">goto</span>(<span class="code-string">'/cart'</span>);<br>
+                            &nbsp;&nbsp;<span class="code-keyword">await</span> page.<span class="code-method">click</span>(<span class="code-string">'[data-test="checkout"]'</span>);<br>
+                            &nbsp;&nbsp;<span class="code-keyword">await</span> page.<span class="code-method">fill</span>(<span class="code-string">'#email'</span>, <span class="code-string">'test@demo.com'</span>);<br>
+                            &nbsp;&nbsp;<span class="code-keyword">await</span> <span class="code-method">expect</span>(page).<span class="code-method">toHaveURL</span>(<span class="code-string">'/success'</span>);<br>
+                            });
+                        </code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title fade-in">Built for modern testing</h2>
+            <div class="features-grid">
+                <div class="feature-card glass fade-in" style="--delay: 0.1s">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/>
+                            <circle cx="12" cy="12" r="3"/>
+                            <line x1="12" y1="2" x2="12" y2="5"/>
+                            <line x1="12" y1="19" x2="12" y2="22"/>
+                            <line x1="2" y1="12" x2="5" y2="12"/>
+                            <line x1="19" y1="12" x2="22" y2="12"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Record interactions</h3>
+                    <p class="feature-desc">Click, type, navigate — GlassQA watches everything and captures each step with precision selectors.</p>
+                </div>
+                <div class="feature-card glass fade-in" style="--delay: 0.2s">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="16 18 22 12 16 6"/>
+                            <polyline points="8 6 2 12 8 18"/>
+                            <line x1="14" y1="4" x2="10" y2="20"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Auto-generate tests</h3>
+                    <p class="feature-desc">Your recorded session becomes a structured, readable test — no boilerplate, no guesswork.</p>
+                </div>
+                <div class="feature-card glass fade-in" style="--delay: 0.3s">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Playwright-ready output</h3>
+                    <p class="feature-desc">Export directly to Playwright. Copy, paste, run. Your tests work on the first try.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo -->
+    <section class="demo" id="demo">
+        <div class="container">
+            <h2 class="section-title fade-in">See it in action</h2>
+            <div class="demo-frame fade-in" style="--delay: 0.15s">
+                <div class="glass demo-player">
+                    <div class="demo-placeholder">
+                        <div class="play-button">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3"/>
+                            </svg>
+                        </div>
+                        <p class="demo-caption">Demo coming soon</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">Built by <a href="https://vincentgaleano.com" target="_blank" rel="noopener noreferrer">Vincent Galeano</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
