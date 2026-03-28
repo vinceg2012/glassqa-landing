@@ -33,11 +33,14 @@
                     </div>
                     <div class="card-body">
                         <code class="code-block">
-                            <span class="code-keyword">test</span>(<span class="code-string">'user completes checkout'</span>, <span class="code-keyword">async</span> ({ page }) => {<br>
-                            &nbsp;&nbsp;<span class="code-keyword">await</span> page.<span class="code-method">goto</span>(<span class="code-string">'/cart'</span>);<br>
-                            &nbsp;&nbsp;<span class="code-keyword">await</span> page.<span class="code-method">click</span>(<span class="code-string">'[data-test="checkout"]'</span>);<br>
-                            &nbsp;&nbsp;<span class="code-keyword">await</span> page.<span class="code-method">fill</span>(<span class="code-string">'#email'</span>, <span class="code-string">'test@demo.com'</span>);<br>
-                            &nbsp;&nbsp;<span class="code-keyword">await</span> <span class="code-method">expect</span>(page).<span class="code-method">toHaveURL</span>(<span class="code-string">'/success'</span>);<br>
+                            <span class="code-keyword">test</span>.<span class="code-method">describe</span>(<span class="code-string">'Checkout Flow'</span>, () => {<br>
+                            &nbsp;&nbsp;<span class="code-keyword">test</span>(<span class="code-string">'user completes checkout'</span>, <span class="code-keyword">async</span> ({ page }) => {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">await</span> page.<span class="code-method">goto</span>(<span class="code-string">'/cart'</span>);<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">const</span> el = <span class="code-keyword">await</span> <span class="code-method">findElement_0</span>(page);<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">await</span> <span class="code-method">safeClick</span>(el);<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">await</span> <span class="code-method">safeFill</span>(<span class="code-keyword">await</span> <span class="code-method">findElement_1</span>(page), <span class="code-string">'test@demo.com'</span>);<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">await</span> <span class="code-method">expect</span>(page).<span class="code-method">toHaveURL</span>(<span class="code-string">'/success'</span>);<br>
+                            &nbsp;&nbsp;});<br>
                             });
                         </code>
                     </div>
