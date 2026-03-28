@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GlassQA Recorder Privacy Policy — No data collection, no tracking, fully local.">
+    <meta name="theme-color" content="#0b0b0f">
+    <title>Privacy Policy — GlassQA</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔬</text></svg>">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background: #0b0b0f;
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.7;
+        }
+        ::selection { background: rgba(100, 210, 255, 0.3); color: #fff; }
+        a { color: #64d2ff; text-decoration: none; transition: color 0.3s ease; }
+        a:hover { color: #a8e0ff; }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 80px 24px 100px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.4);
+            margin-bottom: 48px;
+            transition: color 0.3s ease;
+        }
+        .back-link:hover { color: #64d2ff; }
+
+        h1 {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+        .subtitle {
+            color: rgba(255, 255, 255, 0.35);
+            font-size: 1rem;
+            margin-bottom: 48px;
+        }
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #f5f5f7;
+            margin-top: 40px;
+            margin-bottom: 14px;
+            letter-spacing: -0.01em;
+        }
+        p, ul { margin-bottom: 16px; }
+        ul { padding-left: 24px; }
+        li { margin-bottom: 8px; }
+        strong { color: rgba(255, 255, 255, 0.9); }
+        code {
+            font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
+            font-size: 0.85em;
+            background: rgba(255, 255, 255, 0.06);
+            padding: 2px 7px;
+            border-radius: 5px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .updated {
+            color: rgba(255, 255, 255, 0.25);
+            font-size: 0.85rem;
+            margin-top: 56px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .footer {
+            padding: 48px 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            text-align: center;
+        }
+        .footer-text {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.3);
+        }
+        .footer-text a { color: rgba(255, 255, 255, 0.5); }
+        .footer-text a:hover { color: #64d2ff; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back-link">← Back to GlassQA</a>
+
+        <h1>Privacy Policy</h1>
+        <p class="subtitle">GlassQA Recorder — Chrome Extension</p>
+
+        <h2>Overview</h2>
+        <p>GlassQA Recorder is a browser extension that records your interactions with web pages (clicks, text input, navigation) and converts them into structured test data. Your privacy is important to us. This policy explains what data the extension accesses, how it is used, and how it is stored.</p>
+
+        <h2>Data Collection</h2>
+        <p>GlassQA Recorder does <strong>not</strong> collect, transmit, or sell any personal data. Specifically:</p>
+        <ul>
+            <li><strong>No analytics or tracking.</strong> The extension contains no analytics SDKs, telemetry, or tracking scripts.</li>
+            <li><strong>No external servers.</strong> Recorded data is never sent to any remote server. All data stays on your device.</li>
+            <li><strong>No account required.</strong> The extension does not require sign-up, login, or any form of authentication.</li>
+        </ul>
+
+        <h2>What Data Is Recorded</h2>
+        <p>When you actively press the "Record" button, the extension captures:</p>
+        <ul>
+            <li>The type of interaction (click, text input, navigation)</li>
+            <li>CSS selectors and ARIA attributes of the interacted elements</li>
+            <li>The page URL at the time of each interaction</li>
+            <li>Visible text and accessible names of interacted elements</li>
+            <li>Values entered into form fields during recording</li>
+        </ul>
+        <p>Recording only happens when you explicitly start it. The extension does <strong>not</strong> run or capture any data in the background when recording is off.</p>
+
+        <h2>Data Storage</h2>
+        <p>All recorded data is stored locally on your device using the Chrome <code>storage.local</code> API. Data persists only until you clear it or export it. Exported data is saved as a JSON file to your local file system via the standard browser download dialog.</p>
+
+        <h2>Optional Local Dashboard</h2>
+        <p>If you run the optional GlassQA CLI dashboard on your own machine (<code>localhost:4173</code>), the extension can send recorded steps to it for visualization. This communication happens entirely on your local network (localhost) and no data leaves your device.</p>
+
+        <h2>Permissions Explained</h2>
+        <ul>
+            <li><strong>Host permissions (<code>&lt;all_urls&gt;</code>):</strong> Required so the recorder can capture interactions on any website you choose to test. The content script is only injected into the active tab when you press "Record."</li>
+            <li><strong>Storage:</strong> Used to persist recording state and captured steps locally between page navigations.</li>
+            <li><strong>ActiveTab:</strong> Allows the extension to interact with the tab you are actively viewing.</li>
+            <li><strong>Scripting:</strong> Used to inject the recorder script into the active tab on demand when recording starts.</li>
+            <li><strong>Tabs:</strong> Used to re-inject the recorder when the recording tab navigates to a new page, ensuring continuous capture during a test flow.</li>
+        </ul>
+
+        <h2>Third-Party Services</h2>
+        <p>GlassQA Recorder does not use any third-party services, libraries that phone home, or external APIs.</p>
+
+        <h2>Children's Privacy</h2>
+        <p>The extension is a developer tool and is not directed at children under 13.</p>
+
+        <h2>Changes to This Policy</h2>
+        <p>If this policy is updated, the changes will be posted on this page with an updated date below.</p>
+
+        <h2>Contact</h2>
+        <p>If you have questions about this privacy policy, please open an issue on our <a href="https://github.com/vinceg2012/glassqa/issues">GitHub repository</a>.</p>
+
+        <p class="updated">Last updated: March 28, 2026</p>
+    </div>
+
+    <footer class="footer">
+        <p class="footer-text">Built by <a href="https://vincentgaleano.com" target="_blank" rel="noopener noreferrer">Vincent Galeano</a></p>
+    </footer>
+</body>
+</html>
