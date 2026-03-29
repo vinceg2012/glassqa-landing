@@ -121,6 +121,8 @@ a {
     height: 180px;
     margin-bottom: 40px;
     border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
     filter: drop-shadow(0 0 60px rgba(100, 210, 255, 0.35)) drop-shadow(0 0 120px rgba(100, 210, 255, 0.12));
     animation: logoFloat 4s ease-in-out infinite;
 }
